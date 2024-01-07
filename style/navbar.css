@@ -1,0 +1,91 @@
+/*=========  GOOGLE FONTS  =========*/
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&family=Inter:wght@300;400;600&family=Lato:wght@400;700&family=Poller+One&family=Poppins:wght@300;400;500;600;700&family=Red+Rose:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Popins', sans-serif;
+}
+.navbar{
+    background-color: rgb(19, 25, 33);
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+.amazon-icon{
+    width: 100px;
+    margin-top: 15px;
+    margin-left: 22px;
+}
+.amazon-icon-mobile{
+    display: none;
+}
+.medium-navbar{
+    display: flex;
+    align-items: center;
+}
+.input-search{
+    width: 600px;
+    font-size: 16px;
+    height: 40px;
+    padding-left: 15px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+.button-search{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(254, 189, 105);
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+.ri-search-line{
+    width: 40px;
+    cursor: pointer;
+}
+
+.right-navbar{
+    display: flex;
+    width: 180px;
+    margin-right: 10px;
+}
+.orders-container{
+    text-decoration: none;
+    color: white;
+    margin-right: 14px;
+    margin-top: 14px;
+}
+.return-text,
+.orders-text{
+    display: block;
+    font-size: 13px;
+}
+.orders-text{
+    font-size: 15px;
+    font-weight: 700;
+}
+.cart-container{
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+.cart-image{
+    width: 50px;
+}
+.quantity{
+    position: absolute;
+    color:rgb(226, 138, 24);
+    top: 10px;
+    left: 24px;
+}
+.cart-text{
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 12px;
+    margin-left: 8px;
+}
