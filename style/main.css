@@ -1,106 +1,88 @@
-
-.main{
-    margin-top: 20px;
-    margin-bottom: 20px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.products-grid{
+.main{
+    margin-top: 70px;
+    font-family: sans-serif;
+}
+.grid-container{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
 .product-container{
-    display: flex;
-    flex-direction: column;
-    padding: 40px 25px 25px 25px;
-    border-right: 1px solid rgb(218, 216, 216);
-    border-bottom: 1px solid rgb(218, 216, 216);
+    padding: 40px 25px;
+    border-right: 1px solid rgb(212, 210, 210);
+    border-bottom: 1px solid rgb(212, 210, 210);
 }
-.product-image-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.image-container{
     height: 180px;
     margin-bottom: 20px;
-    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.product-image{
+.image{
     max-width: 100%;
     max-height: 100%;
 }
-.product-title{
+.title-product{
     height: 40px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
 }
-.product-rating{
+.rating-container{
     display: flex;
     align-items: center;
+    margin-top: 7px;
 }
-.rating-stars{
-    width: 100px;
-    margin-right: 10px;
+.rating-image{
+    width: 120px;
 }
-.rating-link{
-    color: rgb(6, 88, 171);
-    text-decoration: none;
-    cursor: pointer;
-    margin-top: 3px;
+.rating-text{
+    color: blue;
+    margin-left: 8px;
+    margin-top: 5px;
 }
 .product-price{
-    font-weight: 700;
-    margin-top: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 7px;
 }
 .select{
-    padding-left: 10px;
     width: 50px;
     height: 30px;
-    font-size: 15px;
-    border-radius: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-.product-messenger{
-    flex: 1;
     font-size: 16px;
-    margin-top: 10px;
-    font-weight: 600;
-}
-.toggle{
-    padding: 8px;
-    margin-top: 10px;
-    margin-right: 2px;
+    padding-left: 10px;
     border-radius: 10px;
-    background-color: #fff;
-    border: 1px solid rgb(200, 200, 200);
-    font-size: 15px;
-    margin-bottom: 10px;
-    cursor: pointer;
+    margin-left: 5px;
 }
-.toggle:active{
-    border: 1px solid rgb(231, 117, 2);
-}
-.added-messenger{
-    color: green;
-    font-size: 16px;
-    margin-top: 10px;
+.added-messanger{
     display: flex;
     align-items: center;
+    color: green;
+    margin-top: 10px;
     opacity: 0;
 }
 .checkmark{
-    height: 20px;
-    margin-right: 5px;
+    width: 30px;
 }
-.button-add{
+.added-text{
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+.add-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-to-cart{
     width: 100%;
-    border-radius: 20px;
-    border: none;
-    background-color: rgb(255, 208, 0);
-    padding: 8px;
     margin-top: 10px;
-    cursor: pointer;
-}
-
-.footer{
-    width: 100%;
-    background-color: rgb(19, 25, 33);
-    height: 100px;
+    background-color: rgb(255, 208, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
 }
