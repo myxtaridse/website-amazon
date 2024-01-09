@@ -64,6 +64,7 @@ document.querySelector('.grid-container').innerHTML = productsHTML;
 //добавление действий к кнопке добавить в корзину
 document.querySelectorAll('.add-to-cart').forEach((button) =>{
     button.addEventListener('click', () =>{
+        
         const productId = button.dataset.productId;
         let matchingItem;
         cart.forEach((item) =>{
@@ -79,6 +80,12 @@ document.querySelectorAll('.add-to-cart').forEach((button) =>{
                 quantity: 1
         });
         };
-        console.log(cart);
+
+        let cartQuantity = 0;
+
+        cart.forEach((item) => {
+            cartQuantity += item.quantity;
+        });
+        document.querySelector('.cart-quantity').innerHTML = cartQuantity;
     });
 });
