@@ -48,16 +48,37 @@ products.forEach((product) =>{
                 <img src="images/icon/checkmark.png" alt="" class="checkmark">
                 <div class="added-text">Added!</div>
             </div>
-            <div class="add-button"><button class="add-to-cart">Add to Cart</button></div>
+            <div class="add-button"><button class="add-to-cart" data-product-id="${product.id}">Add to Cart</button></div>
         </div>
     `;
 });
 
 //объединение всего HTML-кода для всех продуктов вместе
-console.log(productsHTML);
 
 //3 
 //взять весь HTML и выложить его на саму страницу
 //document.querySelector('.grid-container') //берем контейнер, в котором хранятся все контейнеры
 //теперь меняем весь HTML внутри контейнера с нашими изменениями
 document.querySelector('.grid-container').innerHTML = productsHTML; 
+
+//добавление действий к кнопке добавить в корзину
+document.querySelectorAll('.add-to-cart').forEach((button) =>{
+    button.addEventListener('click', () =>{
+        const productId = button.dataset.productId;
+        let matchingItem;
+        cart.forEach((item) =>{
+            if (productId === item.productId){
+                matchingItem = item;
+            }
+        });
+            if (matchingItem){
+                matchingItem.quantity += 1;
+            } else {
+                cart.push({
+                productId: productId,
+                quantity: 1
+        });
+        };
+        console.log(cart);
+    });
+});

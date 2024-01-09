@@ -87,4 +87,8 @@
     border-radius: 15px;
     padding: 7px 10px;
     cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.add-to-cart:hover{
+    background-color: rgb(205, 175, 5);
 }
