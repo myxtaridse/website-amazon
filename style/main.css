@@ -35,7 +35,7 @@
 .rating-container{
     display: flex;
     align-items: center;
-    margin-top: 7px;
+    margin-top: 18px;
 }
 .rating-image{
     width: 120px;
@@ -44,6 +44,7 @@
     color: blue;
     margin-left: 8px;
     margin-top: 5px;
+    cursor: pointer;
 }
 .product-price{
     font-weight: 600;
@@ -81,8 +82,9 @@
 .add-to-cart{
     width: 100%;
     margin-top: 10px;
-    background-color: rgb(255, 208, 0);
+    background-color: rgb(249, 213, 10);
     border: none;
-    border-radius: 10px;
-    padding: 5px 10px;
+    border-radius: 15px;
+    padding: 7px 10px;
+    cursor: pointer;
 }

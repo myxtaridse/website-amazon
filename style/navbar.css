@@ -43,6 +43,7 @@
     background-color: rgb(254, 189, 105);
     border: none;
     margin-left: -2px;
+    cursor: pointer;
 }
 .nav-right-section{
     width: 300px;
@@ -57,6 +58,10 @@
 }
 .cart{
     position: relative;
+}
+.container-orders{
+    text-decoration: none;
+    color: white;
 }
 .return-text{
     font-size: 14px;
