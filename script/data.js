@@ -367,5 +367,23 @@ const products = [{
         count: 3157
     },
     priceCents: 2400
-} 
+}, {
+    id: "cjak48-7382-32l-ndk23-n3k2nek3",
+    image: 'images/product/backpack.jpg',
+    name: 'Black Backpack',
+    rating: {
+        stars: 4,
+        count: 123
+    },
+    priceCents: 1250
+}, {
+    id: "vsk9cs8-3u29-n329dd2-32kd92wqd2",
+    image: 'images/product/umbrella.jpg',
+    name: 'Green Umbrella',
+    rating: {
+        stars: 4.5,
+        count: 161
+    },
+    priceCents: 2035
+}
 ];

@@ -1,3 +1,5 @@
+import {cart} from './cart.js';
+
 let productsHTML = '';
 products.forEach((product) =>{
     productsHTML += `
@@ -23,7 +25,7 @@ products.forEach((product) =>{
         <option value="9">9</option>
         <option value="10">10</option>
     </select>
-    <div class="added-messanger">
+    <div class="added-messanger js-added-to-cart-${product.id}">
         <img src="images/icon/checkmark.png" alt="" class="checkmark">
         <div class="added-text">Added!</div>
     </div>
@@ -34,8 +36,12 @@ products.forEach((product) =>{
 document.querySelector('.grid-container').innerHTML = productsHTML;
 
 document.querySelectorAll('.add-to-cart').forEach((button) =>{
+    let addedTimeOut;
     button.addEventListener('click', () =>{
-        const productId = button.dataset.productId;
+
+        //const productId = button.dataset.productId;
+        //сократили
+        const {productId} = button.dataset;
         let matchingItem;
         cart.forEach((item) =>{
             if (productId === item.productId) {
@@ -48,8 +54,12 @@ document.querySelectorAll('.add-to-cart').forEach((button) =>{
             matchingItem.quantity += quantity;
         } else {
             cart.push({
-                productId: productId,
-                quantity: quantity
+                /*
+                    productId: productId,
+                    quantity: quantity
+                *///сократили
+                productId,
+                quantity
             });
         }
         let cartQuantity = 0;
@@ -57,5 +67,15 @@ document.querySelectorAll('.add-to-cart').forEach((button) =>{
             cartQuantity += item.quantity;
         });
         document.querySelector('.cart-quantity').innerHTML = cartQuantity;
+
+        const added = document.querySelector(`.js-added-to-cart-${productId}`);
+        added.classList.add('added-opacity');
+        if (addedTimeOut) {
+            clearTimeout(addedTimeOut);
+        }
+        const timeoutId = setTimeout(() =>{
+            added.classList.remove('added-opacity');
+        }, 2000); //сообщение удаляется спустя 2 секунды, точнее класс удаляется
+        addedTimeOut = timeoutId;
     });
 });

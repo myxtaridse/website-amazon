@@ -66,6 +66,9 @@
     margin-top: 10px;
     opacity: 0;
 }
+.added-opacity{
+    opacity: 1;
+}
 .checkmark{
     width: 30px;
 }
