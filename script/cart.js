@@ -1,4 +1,4 @@
-export const cart = [{
+export let cart = [{
     productId: '83d4ca15-0f35-48f5-b7a3-1ea210004f2e',
     quantity: 4
 }, {
@@ -30,4 +30,16 @@ export function addToCart(productId) {
             quantity
         });
     }
+}
+
+export function removeProduct(productId) {
+//функция возьмет идентификатор продукта и удалить его из корзины
+    const newCart = []; 
+    //в корзине останутся продукты кроме того, которого мы выбрали, нажав Delete
+    cart.forEach((cartItem) => {
+        if (cartItem.productId !== productId) {
+            newCart.push(cartItem);
+        }
+    });
+    cart = newCart;
 }

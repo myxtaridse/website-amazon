@@ -40,6 +40,9 @@ main{
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+.js-product-none{
+    display: none;
+}
 .title-order{
     color: rgb(0, 118, 0);
     font-weight: 600;
