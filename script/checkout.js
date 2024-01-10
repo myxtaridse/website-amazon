@@ -101,10 +101,16 @@ cart.forEach((cartItem) =>{
 const containerProducts = document.querySelector('.js-container-products');
 containerProducts.innerHTML = cartSummaryHTML;
 
+
 document.querySelectorAll('.js-delete-product').forEach((link) => {
     link.addEventListener('click', () =>{
         const {productId} = link.dataset;
         removeProduct(productId);
-        console.log(cart);
+        const productOrder = document.querySelector(`.js-order-${productId}`);
+        const answer = confirm("Вы действительно хотите удалить продукт?");
+        if (answer === true) {
+            productOrder.remove();
+        } 
+        
     });
 });
