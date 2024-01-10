@@ -32,7 +32,7 @@ cart.forEach((cartItem) =>{
                     ${matchingProduct.name}
                 </div>
 
-                <div class="price-product">$${matchingProduct.priceCents / 100}</div>
+                <div class="price-product">$${(matchingProduct.priceCents / 100).toFixed(2)}</div>
                 <div class="quantity-product">
                     <div class="quantity">
                         Quantity: <span class="quantity-label">${cartItem.quantity}</span>
@@ -52,7 +52,7 @@ cart.forEach((cartItem) =>{
                 </div>
 
                 <div class="delivery-container">
-                    <input class="delivery-input" type="radio">
+                    <input class="delivery-input" type="radio" name="delivery-${matchingProduct.id}">
 
                     <div class="delivery-data-shipping">
                         <div class="delivery-data">
@@ -65,7 +65,7 @@ cart.forEach((cartItem) =>{
                 </div>
 
                 <div class="delivery-container">
-                    <input class="delivery-input" type="radio">
+                    <input class="delivery-input" type="radio" name="delivery-${matchingProduct.id}">
                 
                     <div class="delivery-data-shipping">
                         <div class="delivery-data">
@@ -78,7 +78,7 @@ cart.forEach((cartItem) =>{
                 </div>
 
                 <div class="delivery-container">
-                    <input class="delivery-input" type="radio">
+                    <input class="delivery-input" type="radio" name="delivery-${matchingProduct.id}">
                     
                     <div class="delivery-data-shipping">
                         <div class="delivery-data">
