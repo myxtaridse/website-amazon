@@ -56,6 +56,11 @@
     font-family: sans-serif;
     font-size: 16px;
 }
+.cart-link{
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
 .cart{
     position: relative;
 }
@@ -83,5 +88,5 @@
 }
 .title-cart{
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }

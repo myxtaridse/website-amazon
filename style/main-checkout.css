@@ -1,0 +1,184 @@
+main{
+    margin-top: 130px;
+    margin-left: 150px;
+}
+.title-checkout{
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 16px;
+}
+.containers-main{
+    display: flex;
+    justify-content: space-between;
+}
+.left-container-products{
+    width: 200px;
+    margin-left: 20px;
+}
+.empty-container{
+    display: none;
+}
+.messange-empty{
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.amazon-products-link{
+    background-color: rgb(249, 213, 10);
+    padding: 16px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.amazon-products-link:hover{
+    background-color: rgb(205, 175, 5);
+}
+
+.product-container-order{
+    border: 1px solid rgb(218, 216, 216);
+    border-radius: 10px;
+    width: 700px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.title-order{
+    color: rgb(0, 118, 0);
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.order-sections{
+    display: flex;
+    margin-top: 20px;
+}
+.image-order{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+.image-product{
+    margin-left: 10px;
+    max-width: 120px;
+    max-height: 120px;
+}
+.about-order{
+    width: 300px;
+    margin-left: 10px;
+}
+.title-product,
+.deadline-title{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.price-product{
+    font-weight: 600;
+    color: rgb(177, 39, 4);
+}
+.quantity-product{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+.quantity{
+    font-size: 16px;
+    margin-right: 10px;
+}
+.link-quantity{
+    border: none;
+    background-color: #fff;
+    color: rgb(4, 130, 225);
+    margin-right: 10px;
+    font-size: 16px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+.link-quantity:hover{
+    color: rgb(177, 39, 4);
+}
+.deadlines-data-order{
+    width: 200px;
+}
+.delivery-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.delivery-input{
+    width: 18px;
+    height: 18px;
+}
+.delivery-data-shipping{
+    margin-left: 6px;
+}
+.delivery-data{
+    color: rgb(0, 118, 0);
+    font-weight: 600;
+}
+.delivery-shipping{
+    font-size: 12px;
+    margin-top: 5px;
+    color: gray;
+}
+
+
+.right-container-main{
+    border: 1px solid rgb(218, 216, 216);
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 150px;
+    margin-top: 20px;
+    height: 100%;
+}
+.title-summary{
+    font-weight: 600;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+.row-summary{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    width: 300px;
+}
+.container-border{
+    border-bottom: 1px solid rgb(225, 225, 225);
+    padding-bottom: 5px;
+}
+.money-summary{
+    margin-left: 50px;
+}
+.row-total{
+    border-top: 1px solid rgb(225, 225, 225);
+    padding-top: 10px;
+    color: rgb(177, 39, 4);
+    font-weight: 600;
+    font-size: 20px;
+}
+.paypal-container{
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+}
+.toggle-check{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+.container-execution{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.button-execution{
+    width: 100%;
+    background-color: rgb(249, 213, 10);
+    border: none;
+    border-radius: 14px;
+    padding: 15px 0;
+    margin-top: 10px;
+}

@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.navbar-checkout{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+.left-section-checkout{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+.amazon-link{
+    text-decoration: none;
+    margin-top: 10px;
+}
+.amazon-logo{
+    width: 100px;
+}
+.amazon-logo-mobile{
+    display: none;
+}
+.middle-section-checkout{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    font-size: 24px;
+    font-weight: 600;
+}
+.items-link{
+    text-decoration: none;
+    color: rgb(6, 143, 120);
+}
+.right-section-checkout{
+    width: 200px;
+}
+main{
+    margin-top: 150px;
+    margin-left: 150px;
+}
+.title-checkout{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 16px;
+}
+.containers-main{
+    display: flex;
+    justify-content: space-between;
+}
+.left-container-products{
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.messange-empty{
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.amazon-products-link{
+    background-color: rgb(249, 213, 10);
+    padding: 16px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.amazon-products-link:hover{
+    background-color: rgb(205, 175, 5);
+}
+.right-container-main{
+    border: 1px solid rgb(218, 216, 216);
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 150px;
+}
+.title-summary{
+    font-weight: 600;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+.row-summary{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    width: 300px;
+}
+.container-border{
+    border-bottom: 1px solid rgb(225, 225, 225);
+    padding-bottom: 5px;
+}
+.money-summary{
+    margin-left: 50px;
+}
+.row-total{
+    border-top: 1px solid rgb(225, 225, 225);
+    padding-top: 10px;
+    color: rgb(177, 39, 4);
+    font-weight: 600;
+    font-size: 20px;
+}
+.paypal-container{
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+}
+.toggle-check{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+.container-execution{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.button-execution{
+    width: 100%;
+    background-color: rgb(249, 213, 10);
+    border: none;
+    border-radius: 14px;
+    padding: 15px 0;
+    margin-top: 10px;
+}

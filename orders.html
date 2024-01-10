@@ -3,35 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
     <link rel="stylesheet" href="style/navbar.css">
     <title>Orders</title>
 </head>
 <body>
     <!--NAVBAR-->
     <nav class="navbar">
-        <div class="left-navbar">
-            <a href="#" class="amazon-icon-container">
-                <img src="images/icon/amazon-logo-white.png" alt="logo" class="amazon-icon">
-                <img src="images/icon/amazon-mobile-logo-white.png" alt="logo" class="amazon-icon-mobile">
-            </a>
-        </div>
-
-        <div class="medium-navbar">
-            <input type="text" placeholder="Search" class="input-search">
-            <button class="button-search">
+        <a href="amazon.html" class="nav-left-section">
+            <img src="images/icon/amazon-logo-white.png" alt="" class="amazon-logo">
+            <img src="images/icon/amazon-mobile-logo-white.png" alt="" class="amazon-logo-mobile">
+        </a>
+        <div class="nav-medium-section">
+            <input type="text" class="search-input" placeholder="Search">
+            <button class="search-button">
                 <i class="ri-search-line"></i>
             </button>
         </div>
-
-        <div class="right-navbar">
-            <a href="orders.html" class="orders-container">
-                <span class="return-text">Returns</span>
-                <span class="orders-text">& Orders</span>
+        <div class="nav-right-section">
+            <a class="container-orders" href="orders.html">
+                    <div class="return-text">Returns</div>
+                    <div class="orders-text">& Orders</div>
             </a>
-            <a href="#" class="cart-container">
-                    <img src="images/icon/cart-icon.png" alt="cart" class="cart-image">
-                    <div class="quantity">2</div>
-                    <div class="cart-text">Cart</div>
+            <a href="checkout.html" class="cart-link">
+                <div class="cart">
+                <img src="images/icon/cart-icon.png" alt="" class="cart-icon">
+                <div class="cart-quantity">0</div>
+                </div>
+                <div class="title-cart">Cart</div>
             </a>
         </div>
     </nav>
