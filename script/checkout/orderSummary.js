@@ -1,7 +1,8 @@
 import {cart, removeProduct, calculateUpDateQuantity, updateQuantityCart, updateDeliveryOption} from '../cart.js';
-import products from '../data.js';
+import {products, getProduct} from '../data.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
-import {deliveryOptions} from '../deliveryOptions.js';
+import {deliveryOptions, getDeliveryOption} from '../deliveryOptions.js';
+import { formatCurrency } from '../cents.js';
 
 
 const toDay = dayjs();
@@ -18,24 +19,11 @@ export function renderOrderSummary() { //отображение на стран�
         
         const productId = cartItem.productId;
 
-        let matchingProduct;
-
-        //тут проверим соответствует ли свойство ID нашему идентификатору продукта
-        products.forEach((product) =>{
-            if (product.id === productId) { //если равны, значит сохраним в переменную наш товар
-                matchingProduct = product;
-            }
-        });
+        const matchingProduct = getProduct(productId);
 
         const deliveryOptionId = cartItem.deliveryOptionId;
 
-        let deliveryOption;
-
-        deliveryOptions.forEach((option) => {
-            if (option.id === deliveryOptionId) {
-                deliveryOption = option;
-            }
-        });
+        const deliveryOption = getDeliveryOption(deliveryOptionId);
 
             const toDay = dayjs();
             const deliveryDate = toDay.add(deliveryOption.deliveryDays, 'days');
@@ -57,7 +45,7 @@ export function renderOrderSummary() { //отображение на стран�
                         ${matchingProduct.name}
                     </div>
 
-                    <div class="price-product">$${(matchingProduct.priceCents / 100).toFixed(2)}</div>
+                    <div class="price-product">$${formatCurrency(matchingProduct.priceCents)}</div>
                     <div class="quantity-product">
                         <div class="quantity">
                             Quantity: <span class="quantity-label js-quantity-label-${matchingProduct.id}">${cartItem.quantity}</span>
@@ -100,7 +88,7 @@ export function renderOrderSummary() { //отображение на стран�
 
             const priceString = deliveryOption.priceCents === 0
                 ? 'FREE'
-                : `$${(deliveryOption.priceCents / 100).toFixed(2)} -`;
+                : `$${formatCurrency(deliveryOption.priceCents)} -`;
 
             const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
 

@@ -1,4 +1,16 @@
- const products = [{
+ export function getProduct(productId) {
+    let matchingProduct;
+    
+    //тут проверим соответствует ли свойство ID нашему идентификатору продукта
+    products.forEach((product) =>{
+            if (product.id === productId) { //если равны, значит сохраним в переменную наш товар
+                matchingProduct = product;
+            }
+    });
+    return matchingProduct;
+ }
+ 
+export const products = [{
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: 'images/product/athletic-cotton-socks-6-pairs.jpg',
     name: 'Black and Gray Athletic Cotton Socks - 6 Pairs',
@@ -387,5 +399,3 @@
     priceCents: 2035
 }
 ];
-
-export default products;
