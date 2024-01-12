@@ -3,12 +3,8 @@ import {products, getProduct} from '../data.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import {deliveryOptions, getDeliveryOption} from '../deliveryOptions.js';
 import { formatCurrency } from '../cents.js';
+import { renderPaymentSummary } from './paymentSummary.js';
 
-
-const toDay = dayjs();
-const deliveryDate = toDay.add(7, 'days');
-const updateDeliveryDate = deliveryDate.format('dddd, MMMM D');
-console.log(updateDeliveryDate);
 
 export function renderOrderSummary() { //отображение на странице
 
@@ -126,7 +122,7 @@ export function renderOrderSummary() { //отображение на стран�
                 productOrder.remove();
                 updateCartQuantity();
             } 
-            
+            renderPaymentSummary();
         });
     });
 
@@ -170,6 +166,7 @@ export function renderOrderSummary() { //отображение на стран�
             link.addEventListener('click', () => {
 
             saveClick();
+            renderPaymentSummary();
             
             });
 
@@ -189,6 +186,7 @@ export function renderOrderSummary() { //отображение на стран�
             updateDeliveryOption(productId, deliveryOptionId);
             //после того, как поменяем переключатель даты доставки, обновится весь код
             renderOrderSummary(); 
+            renderPaymentSummary();
         });
     });
 
